@@ -1,0 +1,87 @@
+.body-gradient {
+  background: linear-gradient(48deg, #070739 0%, #060212 35%);
+}
+
+#hero,
+.hero-container,
+.hero-content,
+.hero-gradient,
+.hero-background {
+  height: calc(70lvh - 60px);
+  width: 100%;
+}
+
+#hero {
+  position: relative;
+  margin-top: 60px;
+}
+
+.hero-container,
+.hero-content,
+.hero-gradient,
+.hero-background {
+  position: absolute;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.hero-gradient {
+  z-index: 1;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 19.6%),
+    radial-gradient(97.07% 97.07% at 60.4% -13.07%, rgba(0, 0, 0, 0) 56.64%, #060212 100%);
+}
+
+.hero-background {
+  z-index: 0;
+  background-image: url(../img/background.avif);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 992px) {
+  #hero {
+    height: 100%;
+  }
+
+  .hero-container,
+  .hero-gradient,
+  .hero-background {
+    height: 35lvh;
+  }
+
+  .hero-content {
+    height: auto;
+  }
+
+  .hero-content {
+    align-items: flex-start;
+  }
+
+  .hero-container,
+  .hero-content {
+    position: relative;
+  }
+}
+
+.list {
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+}
+
+.list .item {
+  transition: 0.5s;
+}
+
+.list .item:hover {
+  transform: translateZ(100px);
+}
+
+.cta {
+  background: linear-gradient(320deg, rgba(0, 51, 255, 0.8) 0%, rgba(0, 0, 102, 1) 50%);
+}
